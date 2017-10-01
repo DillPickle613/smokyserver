@@ -19,15 +19,78 @@ html, body {
     top: 1em;
     width: 100%;
     font-size: 5em;
+    color: #738bd7;
   }
 }
 
-#discord {
+.section {
   width: 100%;
-  height: 100%;
+  height: 90%;
+}
+
+#discord {
+  @extend .section;
 
   iframe {
-    width: inherit;
-    height: inherit;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.thread {
+  min-width: 30em;
+  width: 45%;
+  height: 100%;
+  display: inline;
+}
+
+.forum {
+  @extend .section;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+}
+
+#spotify {
+  @extend .section;
+
+  h2 {
+      text-align: center;
+      margin: 0px;
+      padding-top: 2em;
+      padding-bottom: 0.5em;
+      color: #1ed760;
+      background-color: #181818;
+      font-size: 2em;
+  }
+
+  #playlist {
+    @extend .forum;
+
+    iframe {
+      @extend .thread;
+    }
+  }
+}
+
+#rules {
+  margin: 1em;
+  padding-top: 2em;
+
+  h2 {
+    text-align: center;
+    font-size: 2em;
+  }
+
+  dl {
+    padding-left: 1em;
+  }
+
+  dt {
+    font-weight: bold;
+  }
+
+  dd {
+    font-weight: normal;
   }
 }
