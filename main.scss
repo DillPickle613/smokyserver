@@ -86,6 +86,8 @@ html, body, #wrapper {
 
   .thread {
     display: inline-block;
+    overflow-y: auto;
+    overflow-x: hidden;
 
     h3 {
       font-size: 1.4em;
